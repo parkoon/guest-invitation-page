@@ -1,6 +1,7 @@
 import JoinButton from "@/components/join-button";
 import KakaoMapButton from "@/components/map/kakao-map-button";
 import NaverMapButton from "@/components/map/naver-map-button";
+import TMapButton from "@/components/map/t-map-button";
 import Image from "next/image";
 import React from "react";
 
@@ -20,6 +21,7 @@ const Home = () => {
         <div className="flex gap-2 mt-6">
           <NaverMapButton />
           <KakaoMapButton />
+          <TMapButton />
         </div>
       </div>
     </div>
