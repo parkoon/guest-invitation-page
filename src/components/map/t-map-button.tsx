@@ -13,7 +13,9 @@ const TMapButton = () => {
   const handleClick = () => {
     mobileOnlyTrigger((isMobile) => {
       if (isMobile) {
-        window.location.href = `tmap://route?rGoName=${destination}&rGoX=${lat}&rGoY=${lng}`;
+        // window.location.href = `tmap://route?rGoName=${destination}&rGoX=${lat}&rGoY=${lng}`;
+
+        window.location.href = `tmap://route?goalname=${destination}&goalx=${lat}&goaly=${lng}`;
       } else {
         copyToClipboard("3333226595253");
         toast((t) => (
