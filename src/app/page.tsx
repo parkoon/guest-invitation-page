@@ -11,7 +11,7 @@ const Home = () => {
       <div className="absolute  w-full h-full flex justify-center items-center flex-col px-6">
         <img src="/images/title.png" alt="title" />
 
-        <h1 className="text-slate-300 text-[32px] font-bold mt-4">
+        <h1 className="text-slate-300 text-[32px] font-bold mt-4 text-center break-keep">
           게스트로 오신 것을 환영합니다.
         </h1>
 
