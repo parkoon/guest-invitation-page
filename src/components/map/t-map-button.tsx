@@ -15,7 +15,9 @@ const TMapButton = () => {
       if (isMobile) {
         // window.location.href = `tmap://route?rGoName=${destination}&rGoX=${lat}&rGoY=${lng}`;
 
-        window.location.href = `tmap://route?goalname=${destination}&goalx=${lat}&goaly=${lng}`;
+        window.location.href = `tmap://route?goalname=${encodeURIComponent(
+          "한강광나루공원테니스장"
+        )}&goalx=${lat}&goaly=${lng}`;
       } else {
         copyToClipboard("3333226595253");
         toast((t) => (
