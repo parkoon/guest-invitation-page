@@ -1,8 +1,9 @@
+import { MessageContainer } from "@/components/message";
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Noto_Sans_KR } from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
+const notoSans = Noto_Sans_KR({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -16,7 +17,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={notoSans.className}>
+        <main className="w-full h-full max-w-[720px] mx-auto">{children}</main>
+
+        <MessageContainer />
+      </body>
     </html>
   );
 }
