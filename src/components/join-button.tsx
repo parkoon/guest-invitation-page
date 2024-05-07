@@ -10,19 +10,24 @@ const JoinButton = () => {
   const handleClick = () => {
     copyToClipboard("3333226595253");
     toast((t) => (
-      <div>
-        게스트비 10000원 <br />
-        <span>카카오뱅크 김근태 3333-22-6595253</span>
-        <p>계좌번호를 복사했습니다.</p>
+      <div onClick={() => toast.dismiss(t.id)}>
+        <p className="mb-2">계좌번호를 복사했습니다.</p>
+        <span>
+          <div className="bg-[#FEE500] text-[#191919] text-[12px] inline-block p-1 rounded">
+            카카오뱅크
+          </div>
+          김근태 3333-22-6595253
+        </span>
       </div>
     ));
   };
   return (
     <button
-      className="bg-red-900 text-white rounded px-10 py-6 active:scale-90 transition font-bold text-[18px] shadow mt-12"
+      className="bg-red-900 text-white rounded px-10 py-4 active:scale-90 transition shadow mt-12  tracking-widest"
       onClick={handleClick}
     >
-      참여하기
+      <span className="font-semibold text-[18px]">참여하기</span>
+      <p className="text-[14px] text-gray-200">게스트비 10,000원</p>
     </button>
   );
 };

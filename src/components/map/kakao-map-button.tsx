@@ -15,11 +15,11 @@ const KakaoMapButton = () => {
       if (isMobile) {
         window.location.href = `https://map.kakao.com/link/to/${destination} ,${lat},${lng}`;
       } else {
-        copyToClipboard("3333226595253");
+        copyToClipboard(address);
         toast((t) => (
-          <div>
-            <span>{address}</span>
-            <p>주소를 복사했습니다.</p>
+          <div onClick={() => toast.dismiss(t.id)}>
+            <p>아래 주소를 복사했습니다.</p>
+            <span className="font-semibold underline">{address}</span>
           </div>
         ));
       }

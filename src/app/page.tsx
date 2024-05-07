@@ -2,6 +2,7 @@ import JoinButton from "@/components/join-button";
 import KakaoMapButton from "@/components/map/kakao-map-button";
 import NaverMapButton from "@/components/map/naver-map-button";
 import TMapButton from "@/components/map/t-map-button";
+import TextMapButton from "@/components/map/text-map-button";
 import Image from "next/image";
 import React from "react";
 
@@ -13,7 +14,7 @@ const Home = () => {
         <img src="/images/title.png" alt="title" />
 
         <h1 className="text-slate-300 text-[32px] font-bold mt-4 text-center break-keep">
-          게스트로 오신 것을 환영합니다.
+          클럽에 오신 것을 환영합니다.
         </h1>
 
         <JoinButton />
@@ -21,7 +22,11 @@ const Home = () => {
         <div className="flex gap-2 mt-6">
           <NaverMapButton />
           <KakaoMapButton />
-          <TMapButton />
+          {/* <TMapButton /> */}
+        </div>
+
+        <div className="mt-2">
+          <TextMapButton />
         </div>
       </div>
     </div>
