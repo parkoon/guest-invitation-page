@@ -8,6 +8,7 @@ const hahmlet = Hahmlet({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "디아블로 게스트 초대",
   description: "당신을 디아블로 클럽의 게스트로 초대합니다.",
+  openGraph: { images: ["/images/og-image.png"] },
 };
 
 export default function RootLayout({
